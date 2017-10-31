@@ -72,11 +72,3 @@ private:
 };
 
 #endif // lineSeries_h__
-
-// For Emacs
-// Local Variables:
-// Mode: C++
-// c-basic-offset: 2
-// fill-column: 116
-// tab-width: 4
-// End:
