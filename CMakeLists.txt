@@ -10,7 +10,6 @@ cmake_minimum_required(VERSION 3.7.0 FATAL_ERROR)
 # ------------------------------------------------------------------------------------------------------------------------------
 
 PROJECT(chart)
-SET(PROJECT_FOLDER QtWidgets)
 
 IF(WIN32)
 	SET(GUI_TYPE WIN32)
@@ -72,16 +71,6 @@ SET(QT_RESOURCE_CODE
 # Add the windows icon resource file on windows builds
 IF(WIN32)
 	SET(RESOURCE_CODE ${RESOURCE_CODE} )
-ENDIF(WIN32)
-
-# ------------------------------------------------------------------------------------------------------------------------------
-# SOURCE GROUPS. Set up VS2010 source code filters here.
-# ------------------------------------------------------------------------------------------------------------------------------
-
-IF(WIN32)
-	SOURCE_GROUP("Resources" FILES ${RESOURCE_CODE} ${QT_RESOURCE_CODE})
-	SOURCE_GROUP("Generated" FILES ${PROTO_CODE} ${RESOURCES})
-	SOURCE_GROUP("Generated" REGULAR_EXPRESSION ".*_automoc\\.cpp")
 ENDIF(WIN32)
 
 # ------------------------------------------------------------------------------------------------------------------------------
